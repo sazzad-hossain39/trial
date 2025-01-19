@@ -5,10 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            width: 1280px;
+            height: 100vh;
+            display: grid;
+            border: solid 1px red;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width:1200px;
+            border: solid 1px red;
+            height: 400px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .container div{
+            border: solid 1px green;
+        }
+        @media (max-width: 768px){
+            body{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .container{
+                width:100%;
+                border: solid 1px red;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+               column-gap: 0px;
+               row-gap: 0px;
+            }
+            .container div{
+            border: solid 1px green;
+            min-height: 400px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        }
+    </style>
 </head>
 <body>
-    <h1>Okay</h1>
-    <p>Fine</p>
-    <h1>Added New Branch</h1>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
 </body>
 </html>
